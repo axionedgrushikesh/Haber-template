@@ -62,13 +62,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,17 +152,30 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
@@ -104,7 +191,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   border: 0;
@@ -119,9 +208,13 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
+sup {
+  top: -.7em;
+}
 
-sub { bottom: -.25em; }
+sub {
+  bottom: -.25em;
+}
 
 /* 1.2. Clear Fix
    ========================================================================== */
@@ -132,9 +225,13 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
+.cf:after {
+  clear: both;
+}
 
-.cf { *zoom: 1; }
+.cf {
+  zoom: 1;
+}
 
 /* 1.3. Font class declaration
    ========================================================================== */
@@ -155,3 +252,576 @@ sub { bottom: -.25em; }
   font-style: normal;
   font-weight: bold;
 }
+
+/*for all*/
+body {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: #D8DAE2;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.icon::before {
+  color: #D8DAE2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+  display: block;
+  font-family: "FontAwesome";
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1255px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+
+.header-container {
+  background-color: #3E4851;
+  color: #fff;
+}
+
+.header-container .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  flex-basis: 51%;
+}
+
+.header-nav-links {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-links a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-dropdown-list {
+  display: none;
+}
+
+.flex li a {
+  color: #fff;
+}
+
+.active a {
+  color: #DC6226;
+}
+
+.twitter::before {
+  color: #808C94;
+  content: "\f081";
+  font-size: 24px;
+}
+
+.youtube::before {
+  color: #808C94;
+  content: "\f431";
+  font-size: 24px;
+}
+
+.rfi::before {
+  color: #808C94;
+  content: "\e012";
+  font-size: 24px;
+}
+
+.facebook::before {
+  color: #808C94;
+  content: "\f082";
+  font-size: 24px;
+}
+
+.google-plus::before {
+  color: #808C94;
+  content: "\f0d4";
+  font-size: 24px;
+}
+
+.flex li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.about-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.down-arrow::after {
+  content: "\f0d7";
+  font-family: "FontAwesome";
+  color: #DC6226;
+  font-size: 12px;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/
+
+
+/*=================================
+  banner styling starts here
+=================================*/
+
+.banner-section {
+  position: relative;
+}
+
+.banner-text li:not(:first-child) {
+  display: none;
+}
+
+/* .active-slide figure {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
+}
+
+.banner-detail {
+
+} */
+
+/*=================================
+  banner styling ends here
+=================================*/
+
+/*=================================
+  home styling ends here
+=================================*/
+
+.home-section {
+  padding: 70px 0;
+}
+
+.home-section h2 {
+  text-align: center;
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #414B52;
+  margin-bottom: 45px;
+}
+
+.tips-description h3 a {
+  display: block;
+  color: #414B52;
+  width: 99%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 23px;
+}
+
+.home-section p {
+  color: #A29BA1;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.tips-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tips-description li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-background {
+  margin-bottom: 25px;
+  width: 65px;
+  height: 65px;
+  background-color: #DC6226;
+  border-radius: 50%;
+}
+
+.card::before {
+  content: "\f09d";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.graph::before {
+  content: "\e0e3";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.money-bag::before {
+  content: "\f81d";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.money-saving::before {
+  content: "\f4b9";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.read-more {
+  border: 1px solid grey;
+  padding: 13px;
+  color: #414B52;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*=================================
+  home styling ends here
+=================================*/
+
+/*=================================
+  service styling start here
+=================================*/
+
+.services-section {
+  background-color: #EAEEF4;
+  padding: 80px 0;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  color: #404B52;
+  margin-bottom: 45px;
+}
+
+.service-top p {
+  color: #404B52;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.service-bottom {
+  display: flex;
+}
+
+.service-bottom a {
+  display: inline-block;
+}
+
+.service-article {
+  background-color: #fff;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 13px 25px;
+}
+
+.service-bottom .service-article:not(:last-child) {
+  margin-right: 30px;
+}
+
+.service-article img {
+  width: 100%;
+}
+
+.service-article h3 {
+  margin-top: 30px;
+}
+
+.service-article h3 a {
+  color: #DC6226;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.service-article p {
+  font-size: 14px;
+  color: #A29BA1;
+  padding: 10px 30px 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+.more-icon::before {
+  content: "\f0a9";
+  font-family: "FontAwesome";
+  color: #404B52;
+  font-size: 22px;
+}
+
+/*=================================
+  service styling ends here
+=================================*/
+
+/*=================================
+  investment styling starts here
+=================================*/
+
+.investment-section {
+  background: linear-gradient(to Right, #DB6326 50%, #414A53 50%);
+}
+
+.d-flex {
+  display: flex;
+  padding: 50px 0;
+}
+
+.fresh-investment h3,
+.save-money h3 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.investment-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.fresh-investment {
+  width: 50%;
+}
+
+.save-money {
+  width: 50%;
+  padding-left: 90px;
+}
+
+.gear-icon::before {
+  content: "\f013";
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.gear-icon {
+  color: #fff;
+  font-weight: 700;
+  width: 80%;
+}
+
+.investment-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.investment-list li:first-child {
+  line-height: 35px;
+}
+
+.read-learn-border {
+  display: inline-block;
+  margin-top: 40px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.save-money p {
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/*=================================
+  investment styling ends here
+=================================*/
+
+/*=================================
+  clients styling starts here
+=================================*/
+
+.clients-section {
+  padding: 50px 0;
+  position: relative;
+}
+
+.clients-logo {
+  display: flex;
+  text-align: center;
+}
+
+.clients-logo img {
+  width: 100%;
+}
+
+.clients-logo li {
+  flex-basis: 50%
+}
+
+.clients-logo li:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* .clients-logo {
+  position: relative;
+} */
+
+.previous-next {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  left: 5px;
+  right: 0;
+}
+
+.previous::before {
+  content: "\f104";
+  color: #000000;
+  font-size: 30px;
+}
+
+.next::before {
+  content: "\f105";
+  color: #000000;
+  font-size: 30px;
+}
+
+.previous {
+  display: inline-block;
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+}
+
+.next {
+  display: inline-block;
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+}
+
+/*=================================
+  clients styling ends here
+=================================*/
+
+/*=================================
+  contact styling starts here
+=================================*/
+
+
+
+/*=================================
+  contact styling ends here
+=================================*/
+
+
+
+
+/*=================================
+  footer styling starts here
+=================================*/
+
+.footer-top {
+  background-color: #505C62;
+}
+
+.footer-top .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-background {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 65px;
+  height: 65px;
+  background-color: #DC6226;
+  border-radius: 50%;
+}
+
+.location-icon::before {
+  content: "\f3c5";
+  color: #fff;
+  padding: 17px 21px;
+  font-size: 30px;
+}
+
+.footer-top address {
+  display: flex;
+  align-items: center;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.e-mail-icon::before {
+  content: "\f0e0";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.phone-icon::before {
+  content: "\f095";
+  color: #fff;
+  padding: 19px;
+  font-size: 24px;
+}
+
+.footer-bottom {
+  background-color: #404950;
+}
+
+/*=================================
+  footer styling ends here
+=================================*/
