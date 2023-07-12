@@ -256,6 +256,7 @@ sub {
 /*for all*/
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -301,6 +302,10 @@ li {
   Header styling starts here
 =================================*/
 
+.header-container img {
+  width: 100%;
+}
+
 .header-container {
   background-color: #3E4851;
   color: #fff;
@@ -314,6 +319,10 @@ li {
 
 .navbar {
   flex-basis: 51%;
+}
+
+.hamberger-icon {
+  display: none;
 }
 
 .header-nav-links {
@@ -397,7 +406,9 @@ li {
   banner styling starts here
 =================================*/
 
-.banner-section {
+.banner-section .wrapper {
+  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 
@@ -405,15 +416,107 @@ li {
   display: none;
 }
 
-/* .active-slide figure {
-  position: absolute;
+.banner-text {
+  min-height: 50%;
+}
+
+.active-slide {
+  /* position: absolute; */
   width: 100vw;
   left: 0;
   z-index: -1;
+  display: block;
 }
 
-.banner-detail {
+.active-slide img {
+  width: 100%;
+}
 
+
+.banner-detail {
+  width: 1056px;
+  transform: translateY(-100%);
+  background-color: #dc6227;
+  padding: 25px 80px;
+  text-align: center;
+  color: #fff;
+  max-width: 50%;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.prev::before {
+  content: "\f053";
+  font-size: 28px;
+  color: #fff;
+}
+
+.prev {
+  display: inline-block;
+  background: none;
+  border: none;
+  position: absolute;
+  left: 27%;
+  top: -45px;
+  width: 28px;
+  height: 28px;
+}
+
+.nxt::before {
+  content: "\f054";
+  font-size: 28px;
+  color: #fff;
+}
+
+.nxt {
+  display: inline-block;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 26.5%;
+  top: -45px;
+  width: 28px;
+  height: 28px;
+}
+
+.banner-detail h1 {
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.arrows {
+  margin: auto;
+  text-align: center;
+  transform: translateY(-18px);
+  text-indent: -999999px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .arrows::before {
+  content: "\f053";
+  font-family: "fontAwesome";
+  text-indent: 0;
+  position: absolute;
+  top: -20px;
+  left: 26%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+}
+
+.arrows::after {
+  content: "\f054";
+  font-family: "fontAwesome";
+  text-indent: 0;
+  position: absolute;
+  top: -20px;
+  right: 26%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
 } */
 
 /*=================================
@@ -466,8 +569,8 @@ li {
 .tips-description li {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  flex-basis: 30%;
 }
 
 .icon-background {
@@ -751,7 +854,79 @@ li {
   contact styling starts here
 =================================*/
 
+.contact-section {
+  position: relative;
+}
 
+.contact-section figure {
+  min-height: 41vh;
+}
+
+.contact-section figure img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: .8;
+}
+
+.contact-form {
+  width: 100%;
+  transform: translateY(-200px);
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-form-input {
+  width: 40%;
+  margin-right: 30px;
+}
+
+.details-form-input input,
+.input-textaria textarea {
+  padding: 10px;
+  width: 100%;
+  background-color: #929292;
+  opacity: .7;
+  border: 1px solid #fff;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.input-grp {
+  margin-bottom: 23px;
+}
+
+.input-textaria {
+  width: 60%;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-btn input {
+  background-color: #DB6326;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 /*=================================
   contact styling ends here
@@ -765,7 +940,8 @@ li {
 =================================*/
 
 .footer-top {
-  background-color: #505C62;
+  background-color: #515B64;
+  padding: 100px 0;
 }
 
 .footer-top .wrapper {
@@ -775,7 +951,7 @@ li {
 
 .icon-background {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   width: 65px;
   height: 65px;
   background-color: #DC6226;
@@ -794,6 +970,12 @@ li {
   align-items: center;
 }
 
+.footer-top address a,
+.mail a,
+.phone a {
+  color: #fff;
+}
+
 .mail {
   display: flex;
   align-items: center;
@@ -802,6 +984,17 @@ li {
 .phone {
   display: flex;
   align-items: center;
+}
+
+.footer-top address {
+  flex-basis: 40%;
+}
+.phone {
+  flex-basis: 50%;
+}
+
+.mail {
+  flex-basis: 60%;
 }
 
 .e-mail-icon::before {
@@ -818,10 +1011,474 @@ li {
   font-size: 24px;
 }
 
+.call-us {
+  display: block;
+  color: #fff;
+}
+
+.grey-background {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: #6D717C;
+  text-align: center;
+  padding: 13px;
+  margin-right: 20px;
+}
+
+
 .footer-bottom {
   background-color: #404950;
+  padding: 70px 0 140px;
+}
+
+.footer-bottom .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright h3 {
+  display: inline-block;
+}
+
+.copyright a {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.copyright span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-icon-list {
+  margin-top: 15px;
+}
+
+.mt-size::before {
+  font-size: 30px;
+}
+
+.footer-icon-list li:not(:last-child) {
+  margin-right: 23px;
+}
+
+.footer-right img {
+  width: 100%;
 }
 
 /*=================================
   footer styling ends here
+=================================*/
+
+
+/*=================================
+  media query for 995 above starts here
+=================================*/
+
+@media only screen and (min-width: 995px) {
+
+  .header-nav-links a:hover,
+  .twitter:hover::before,
+  .youtube:hover::before,
+  .rfi:hover::before,
+  .facebook:hover::before,
+  .google-plus:hover::before,
+  .more-icon:hover::before {
+    color: #DB6326;
+  }
+
+  .prev,
+  .previous {
+    transition: 0.3s ease-in-out;
+  }
+
+  .prev:hover,
+  .previous:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .nxt,
+  .next {
+    transition: 0.3s ease-in-out;
+  }
+
+  .nxt:hover,
+  .next:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .read-more:hover {
+    background-color: #414B52;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .read-learn-border:hover {
+    background-color: #fff;
+    color: #DB6326;
+  }
+
+  .hover-ef:hover {
+    background-color: #fff;
+    color: #414A53;
+  }
+
+  .submit-btn {
+    transition: 0.3s ease-in-out;
+  }
+
+  .submit-btn input:hover {
+    background-color: #fff;
+    color: #DB6326;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .copyright a:hover {
+    color: #DB6326;
+  }
+
+}
+
+
+@media only screen and (max-width: 995px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .hamberger-icon::before {
+    content: "\f0c9";
+    color: #1C2320;
+    font-size: 24px;
+    color: #808C94;
+  }
+
+  .hamberger-icon {
+    display: inline-block;
+  }
+}
+
+/*=================================
+  media query for 995 above ends here
+=================================*/
+
+/*=================================
+  media query for 768 starts here
+=================================*/
+
+@media only screen and (max-width: 768px) {
+  .banner-detail {
+    width: 800px;
+    padding: 12px 50px
+  }
+
+  .banner-detail h1 {
+    font-size: 20px;
+  }
+
+  .prev::before,
+  .nxt::before {
+    font-size: 22px;
+  }
+
+  .home-section {
+    padding: 50px 0;
+  }
+
+  .home-section h2,
+  .services-section h2 {
+    font-size: 25px;
+    margin-bottom: 38px;
+  }
+
+  .card::before,
+  .graph::before,
+  .money-bag::before,
+  .money-saving::before {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  .icon-background {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tips-description h3 a {
+    font-size: 15px;
+  }
+
+  .home-section p {
+    font-size: 12px;
+  }
+
+  .read-more {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .service-top p {
+    font-size: 15px;
+  }
+
+  .service-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-bottom .service-article:not(:last-child) {
+    flex-basis: 45%;
+    margin-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  .service-bottom .service-article:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .service-article h3 a {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .service-article p {
+    font-size: 12px;
+  }
+
+  .tips-description {
+    flex-wrap: wrap;
+  }
+
+  .tips-description li {
+    margin-bottom: 20px;
+  }
+
+  .fresh-investment h3,
+  .save-money h3 {
+    font-size: 24px;
+  }
+
+  .gear-icon::before {
+    font-size: 10px;
+  }
+
+  .gear-icon,
+  .save-money p {
+    font-size: 14px;
+  }
+
+  .read-learn-border {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .save-money {
+    padding-left: 50px;
+  }
+
+  .clients-logo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .clients-logo li {
+    flex-basis: 12%;
+  }
+
+  .previous::before,
+  .next::before {
+    font-size: 20px;
+  }
+
+  .location-icon::before,
+  .e-mail-icon::before,
+  .phone-icon::before {
+    font-size: 20px;
+    padding: 14px 16px;;
+  }
+
+  .grey-background {
+    width: 70px;
+    height: 70px;
+    padding: 9px;
+  }
+
+  .footer-top .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer-top address {
+    flex-basis: 40%;
+  }
+  .phone {
+    flex-basis: 50%;
+  }
+
+  .mail {
+    flex-basis: 60%;
+  }
+
+  .footer-top {
+    padding: 70px 0;
+  }
+
+  .footer-bottom .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .copyright a {
+    font-size: 27px;
+  }
+
+  .mt-size::before {
+    font-size: 26px;
+  }
+
+  .header-container img {
+    width: 70%;
+  }
+  
+}
+
+/*=================================
+  media query for 768 ends here
+=================================*/
+
+/*=================================
+  media query for 640 starts here
+=================================*/
+
+@media only screen and (max-width: 640px) {
+
+  .service-bottom {
+    flex-direction: column;
+  }
+
+  .service-bottom .service-article:first-child {
+    margin-right: 0;
+  }
+
+  .tips-description li {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    padding: 34px 0;
+  }
+
+  .save-money {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .fresh-investment {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .investment-section {
+    background: linear-gradient(to bottom, #DB6326 50%, #414A53 50%);
+  }
+
+  .footer-top .wrapper {
+    flex-direction: column;
+  }
+
+  .footer-top address {
+    margin-bottom: 20px;
+  }
+
+  .mail {
+    margin-bottom: 20px;
+  }
+
+  .footer-top {
+    padding: 55px 0;
+  }
+}
+
+/*=================================
+  media query for 640 ends here
+=================================*/
+
+/*=================================
+  media query for 480 starts here
+=================================*/
+
+@media only screen and (max-width: 480px) {
+
+  .banner-detail h1,
+  .prev::before, .nxt::before {
+    font-size: 14px; 
+  }
+
+  .tips-description {
+    flex-direction: column;
+  }
+
+  .home-section h2, 
+  .services-section h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .fresh-investment h3, 
+  .save-money h3 {
+    font-size: 20px;
+  }
+
+
+
+
+  .gear-icon::before {
+    font-size: 8px;
+  }
+
+  .gear-icon,
+  .gear-icon, .save-money p  {
+    font-size: 12px;
+  }
+
+  .read-learn-border {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .clients-logo li {
+    flex-basis: 10%;
+  }
+
+  .previous::before,
+  .next::before {
+    font-size: 15px;
+  }
+
+  .footer-top {
+    padding: 40px 0;
+  }
+
+  .header-container img {
+    width: 50%;
+  }
+}
+
+/*=================================
+  media query for 480 ends here
 =================================*/
