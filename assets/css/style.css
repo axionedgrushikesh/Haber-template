@@ -987,14 +987,16 @@ li {
 }
 
 .footer-top address {
-  flex-basis: 40%;
+  flex-basis: 50%;
 }
+
 .phone {
   flex-basis: 50%;
 }
 
 .mail {
-  flex-basis: 60%;
+  flex-basis: 50%;
+  margin-right: 20px;
 }
 
 .e-mail-icon::before {
@@ -1161,6 +1163,10 @@ li {
   .hamberger-icon {
     display: inline-block;
   }
+
+  .footer-top address a, .mail a {
+    margin-right: 10px;
+  }
 }
 
 /*=================================
@@ -1172,6 +1178,20 @@ li {
 =================================*/
 
 @media only screen and (max-width: 768px) {
+
+  .twitter::before,
+  .youtube::before,
+  .rfi::before,
+  .facebook::before,
+  .google-plus::before,
+  .hamberger-icon::before {
+    font-size: 22px;
+  }
+
+  .flex li a {
+    width: 20px;
+  }
+
   .banner-detail {
     width: 800px;
     padding: 12px 50px
@@ -1303,7 +1323,8 @@ li {
   .e-mail-icon::before,
   .phone-icon::before {
     font-size: 20px;
-    padding: 14px 16px;;
+    padding: 14px 16px;
+    ;
   }
 
   .grey-background {
@@ -1319,6 +1340,7 @@ li {
   .footer-top address {
     flex-basis: 40%;
   }
+
   .phone {
     flex-basis: 50%;
   }
@@ -1352,7 +1374,29 @@ li {
   .header-container img {
     width: 70%;
   }
-  
+
+  .footer-top address {
+    margin-bottom: 20px;
+  }
+
+  .clients-section {
+    padding: 30px 0;
+  }
+
+  .submit-btn input {
+    padding: 14px 22px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .copyright span {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    padding: 63px 0 100px;
+  }
+
 }
 
 /*=================================
@@ -1365,12 +1409,25 @@ li {
 
 @media only screen and (max-width: 640px) {
 
-  .service-bottom {
-    flex-direction: column;
+  .twitter::before,
+  .youtube::before,
+  .rfi::before,
+  .facebook::before,
+  .google-plus::before,
+  .hamberger-icon::before {
+    font-size: 20px;
+  }
+
+  .flex li a {
+    width: 12px;
+  }
+
+  .banner-detail h1 {
+    font-size: 17px;
   }
 
   .service-bottom .service-article:first-child {
-    margin-right: 0;
+    margin-right: 25px;
   }
 
   .tips-description li {
@@ -1412,6 +1469,20 @@ li {
   .footer-top {
     padding: 55px 0;
   }
+
+  .clients-section {
+    padding: 20px 0;
+  }
+
+  .submit-btn input {
+    padding: 12px 22px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .footer-bottom {
+    padding: 56px 0 80px;
+  }
 }
 
 /*=================================
@@ -1424,35 +1495,66 @@ li {
 
 @media only screen and (max-width: 480px) {
 
+  .twitter::before,
+  .youtube::before,
+  .rfi::before,
+  .facebook::before,
+  .google-plus::before,
+  .hamberger-icon::before {
+    font-size: 16px;
+  }
+
+  .flex {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .flex li a {
+    width: 10px;
+  }
+
+  .service-top p {
+    font-size: 13px;
+  }
+
+  .service-article h3 a,
+  .fresh-investment h3,
+  .save-money h3 {
+    font-size: 17px;
+  }
+
   .banner-detail h1,
-  .prev::before, .nxt::before {
-    font-size: 14px; 
+  .prev::before,
+  .nxt::before {
+    font-size: 14px;
   }
 
   .tips-description {
     flex-direction: column;
   }
 
-  .home-section h2, 
+  .home-section h2,
   .services-section h2 {
     font-size: 18px;
     margin-bottom: 30px;
   }
 
-  .fresh-investment h3, 
-  .save-money h3 {
-    font-size: 20px;
+  .service-bottom {
+    flex-direction: column;
   }
 
-
-
+  .service-bottom .service-article:first-child {
+    margin-right: 0;
+  }
 
   .gear-icon::before {
     font-size: 8px;
   }
 
   .gear-icon,
-  .gear-icon, .save-money p  {
+  .gear-icon,
+  .save-money p {
     font-size: 12px;
   }
 
@@ -1476,6 +1578,36 @@ li {
 
   .header-container img {
     width: 50%;
+  }
+
+  .contacts {
+    flex-direction: column;
+  }
+
+  .details-form-input {
+    width: 100%;
+  }
+
+  .input-textaria {
+    width: 100%;
+  }
+
+  .clients-section {
+    padding: 10px 0;
+  }
+
+  .submit-btn input {
+    padding: 9px 18px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .copyright a {
+    font-size: 22px;
+  }
+
+  .footer-bottom {
+    padding: 50px 0 70px;
   }
 }
 
