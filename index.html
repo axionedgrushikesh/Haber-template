@@ -42,21 +42,21 @@
         <div class="wrapper">
           <figure>
             <a href="/index.html" title="Haber">
-              <img src="https://dummyimage.com/233x105/000/fff" alt="Logo of Haber">
+              <img src="https://dummyimage.com/233x110/DB6326/fff" alt="Logo of Haber">
             </a>
           </figure>
 
-          <nav>
+          <nav class="navbar">
             <ul class="header-nav-links">
               <li class="active">
-                <a href="/index.html" title="Home">Home</a>div
+                <a href="/index.html" title="Home">Home</a>
               </li>
-              <li class="about-list">
-                <a href="#FIXME" title="About">About</a>
-                <ul class="about-dropdown-list">
-                  <li>first</li>
-                  <li>second</li>
-                  <li>third</li>
+              <li class="dropdown about-list">
+                <a href="#FIXME" title="About" class="dropbtn down-arrow">About</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
                 </ul>
               </li>
               <li>
@@ -94,6 +94,9 @@
               <a href="#FIXME" title="google-plus" class="icon google-plus" target="_blank"
                 rel="noopener noreferrer">Google Plus</a>
             </li>
+            <li class="icon hamberger-icon">
+              hamberger
+            </li>
           </ul>
         </div>
       </div>
@@ -104,14 +107,16 @@
       <!-- banner section starts here -->
       <section class="banner-section">
         <div class="wrapper">
-          <button class="previous">Previous</button>
           <ul class="banner-text">
             <li class="active-slide">
               <figure>
-                <img src="https://dummyimage.com/1298x473/000/fff" alt="Banner of Book">
+                <img src="https://dummyimage.com/1351x473/72838D/fff" alt="Banner of Book">
               </figure>
-              <h1>WE MEET YOUR FINANCIAL INVESTMENT NEEDS</h1>
+              <div class="banner-detail">
+                <h1>WE MEET YOUR FINANCIAL INVESTMENT NEEDS</h1>
+              </div>
             </li>
+
             <li>
               <figure>
                 <img src="https://dummyimage.com/1298x473/000/fff" alt="Banner of Book">
@@ -125,7 +130,10 @@
               <h1>Lorem ipsum dolor sit amet consectetur.</h1>
             </li>
           </ul>
-          <button class="next">Next</button>
+          <div class="arrows">
+            <button class="icon prev">Previous</button>
+            <button class="icon nxt">Next</button>
+          </div>
         </div>
       </section>
       <!-- banner section ends here -->
@@ -136,7 +144,7 @@
           <h2>Our Focus is Our Client's Success</h2>
           <ul class="tips-description">
             <li>
-              <a class="icon-background" href="#FIXME" title="card">
+              <a class="icon card icon-background" href="#FIXME" title="card">
                 Card
               </a>
               <h3>
@@ -146,10 +154,10 @@
                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, exercitation ullamclaboris nisi ut aliquimex ea commodo consequat.
               </p>
-              <a href="#FIXME" title="Read More">Read More</a>
+              <a href="#FIXME" title="Read More" class="read-more">Read More</a>
             </li>
             <li>
-              <a class="icon-background" href="#FIXME" title="graph">
+              <a class="icon graph icon-background" href="#FIXME" title="graph">
                 Graph
               </a>
               <h3>
@@ -160,10 +168,10 @@
                 dolore magna aliqua.
                 Ut enim ad minim veniam, exercitation laboris nisi ut. massa aliquip
               </p>
-              <a href="#FIXME" title="Read More">Read More</a>
+              <a href="#FIXME" title="Read More" class="read-more">Read More</a>
             </li>
             <li>
-              <a class="icon-background" href="#FIXME" title="money bag">
+              <a class="icon money-bag icon-background" href="#FIXME" title="money bag">
                 Money Bag
               </a>
               <h3>
@@ -174,10 +182,10 @@
                 et dolore magna aliqua.
                 Ut enim ad minim veniam, exercitation ullamco ullamco.
               </p>
-              <a href="#FIXME" title="Read More">Read More</a>
+              <a href="#FIXME" title="Read More" class="read-more">Read More</a>
             </li>
             <li>
-              <a class="icon-background" href="#FIXME" title="money">
+              <a class="icon money-saving icon-background" href="#FIXME" title="money">
                 Money
               </a>
               <h3>
@@ -188,7 +196,7 @@
                 magna aliqua.
                 Ut enim ad minim veniam, exercitation ullamco laboris nisi ut aliquip.
               </p>
-              <a href="#FIXME" title="Read More">Read More</a>
+              <a href="#FIXME" title="Read More" class="read-more">Read More</a>
             </li>
           </ul>
         </div>
@@ -210,7 +218,7 @@
             <article class="service-article">
               <figure>
                 <a href="#FIXME" title="Aut perferendis">
-                  <img src="https://dummyimage.com/352x203/000/fff" alt="Three People">
+                  <img src="https://dummyimage.com/354x203/000/fff" alt="Three People">
                 </a>
               </figure>
               <h3>
@@ -221,7 +229,7 @@
                 et dolore magna aliqua.
                 Ut enim ad minim
               </p>
-              <a href="#FIXME" title="more">More icon</a>
+              <a href="#FIXME" title="more" class="icon more-icon">More icon</a>
             </article>
             <article class="service-article">
               <figure>
@@ -236,7 +244,7 @@
                 Massa dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore est.
                 et dolore magna aliqua. Ut enim ad
               </p>
-              <a href="#FIXME" title="more icon">More icon</a>
+              <a href="#FIXME" title="more icon" class="icon more-icon">More icon</a>
             </article>
             <article class="service-article">
               <figure>
@@ -252,7 +260,7 @@
                 aliqua.
                 Ut enim ad minim veniam
               </p>
-              <a href="#FIXME" title="more icon">More icon</a>
+              <a href="#FIXME" title="more icon" class="icon more-icon">More icon</a>
             </article>
           </div>
         </div>
@@ -262,41 +270,43 @@
       <!-- investment section starts here -->
       <div class="investment-section">
         <div class="wrapper">
-          <div class="fresh-investment">
-            <h3>Fresh Investment Solutions!</h3>
-            <ul class="investment-list">
-              <li class="gear-icon">
-                Dolor sit amet, consectetur adipisicing Sed do eiusmod tempor incididunt ut labore
-              </li>
-              <li class="gear-icon">
-                Et dolore magna aliquat enim ad minim veniam
-              </li>
-              <li class="gear-icon">
-                Duis nostrud exercitation ullamco laboris
-              </li>
-              <li class="gear-icon">
-                Ex ea commodo consequat
-              </li>
-            </ul>
-            <a href="#FIXME" title="learn more" class="read-learn-border">Learn More</a>
-          </div>
-          <div class="save-money">
-            <h3>Learning to Save Money</h3>
-            <ul class="money-list">
-              <li class="gear-icon">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-              </li>
-              <li class="gear-icon">
-                Sed do eiusmod tempor incididunt ut labore
-              </li>
-              <li class="gear-icon">
-                Ut enim ad minim veniam quis nostrud exercitation
-              </li>
-            </ul>
-            <p>onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-            <a href="#FIXME" title="learn more" class="read-learn-border">Learn More</a>
+          <div class="d-flex">
+            <div class="fresh-investment">
+              <h3>Fresh Investment Solutions!</h3>
+              <ul class="investment-list">
+                <li class="gear-icon">
+                  Dolor sit amet, consectetur adipisicing Sed do eiusmod tempor incididunt ut labore
+                </li>
+                <li class="gear-icon">
+                  Et dolore magna aliquat enim ad minim veniam
+                </li>
+                <li class="gear-icon">
+                  Duis nostrud exercitation ullamco laboris
+                </li>
+                <li class="gear-icon">
+                  Ex ea commodo consequat
+                </li>
+              </ul>
+              <a href="#FIXME" title="learn more" class="read-learn-border">Learn More</a>
+            </div>
+            <div class="save-money">
+              <h3>Learning to Save Money</h3>
+              <ul class="investment-list">
+                <li class="gear-icon">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                </li>
+                <li class="gear-icon">
+                  Sed do eiusmod tempor incididunt ut labore
+                </li>
+                <li class="gear-icon">
+                  Ut enim ad minim veniam quis nostrud exercitation
+                </li>
+              </ul>
+              <p>onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+              <a href="#FIXME" title="learn more" class="read-learn-border hover-ef">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -337,9 +347,9 @@
               </figure>
             </li>
           </ul>
-          <div class="previous-next-btn">
-            <button class="previous">Previous</button>
-            <button class="next">Next</button>
+          <div class="previous-next">
+            <button class="icon previous">Previous</button>
+            <button class="icon next">Next</button>
           </div>
         </div>
       </div>
@@ -351,26 +361,30 @@
           <figure>
             <img src="https://dummyimage.com/1518x456/000/fff" alt="city image">
           </figure>
-          <form class="contact-form">
+          <div class="contact-us-form">
             <h2>QUICK CONTACT</h2>
-            <div class="contacts">
-              <div class="details-form-input">
-                <div class="input-grp">
-                  <input type="text" placeholder="Name:" name="name" />
+            <form class="contact-form">
+              <div class="contacts">
+                <div class="details-form-input">
+                  <div class="input-grp">
+                    <input type="text" placeholder="Name:" name="name" />
+                  </div>
+                  <div class="input-grp">
+                    <input type="email" placeholder="E-mail:" name="email" />
+                  </div>
+                  <div class="input-grp">
+                    <input type="number" placeholder="phone:" name="phoneNo" />
+                  </div>
                 </div>
-                <div class="input-grp">
-                  <input type="email" placeholder="E-mail:" name="email" />
-                </div>
-                <div class="input-grp">
-                  <input type="number" placeholder="phone:" name="phoneNo" />
+                <div class="input-textaria">
+                  <textarea id="message" name="message" rows="9" cols="60" placeholder="Message"></textarea>
                 </div>
               </div>
-              <div class="input-grp">
-                <textarea id="message" name="message" rows="4" cols="50" placeholder="Message"></textarea>
+              <div class="submit-btn">
+                <input type="submit" value="Send" />
               </div>
-            </div>
-            <input type="submit" value="Submit" />
-          </form>
+            </form>
+          </div>
         </div>
       </section>
       <!-- contact section ends here -->
@@ -381,20 +395,26 @@
     <footer>
       <div class="footer-top">
         <div class="wrapper">
-          <div class="address">
-            <span class="location-icon">Location</span>
-            <address>
-              <a href="#FIXME" title="NEW YORK 9870 ST VINCENT GLASGOW">NEW YORK 9870 ST VINCENT GLASGOW</a>
-            </address>
-          </div>
+          <address>
+            <div class="grey-background">
+              <span class="icon icon-background location-icon">Location</span>
+            </div>
+            <a href="#FIXME" title="NEW YORK 9870 ST VINCENT GLASGOW">NEW YORK 9870 ST VINCENT GLASGOW</a>
+          </address>
           <div class="mail">
-            <span class="e-mail-icon">E-Mail</span>
+            <div class="grey-background">
+              <span class="icon icon-background e-mail-icon">E-Mail</span>
+            </div>
             <a href="mailto:CONTACT@DEMOLINK.ORG" title="CONTACT@DEMOLINK.ORG">CONTACT@DEMOLINK.ORG</a>
           </div>
           <div class="phone">
-            <span class="phone-icon">Phone</span>
-            <span>CALL US:</span>
-            <a href="mailto:CONTACT@DEMOLINK.ORG" title="+1 800 603 6035">+1 800 603 6035</a>
+            <div class="grey-background">
+              <span class="icon icon-background phone-icon">Phone</span>
+            </div>
+            <div>
+              <span class="call-us">CALL US:</span>
+              <a href="mailto:CONTACT@DEMOLINK.ORG" title="+1 800 603 6035">+1 800 603 6035</a>
+            </div>
           </div>
         </div>
       </div>
@@ -407,24 +427,30 @@
               </h3>
               <span>&copy; 2018 Privacy policy</span>
             </div>
-            <ul>
+            <ul class="footer-icon-list">
               <li>
-                <a href="#FIXME" title="twitter" target="_blank" class="icon twitter"
+                <a href="#FIXME" title="twitter" target="_blank" class="icon twitter mt-size"
                   rel="noopener noreferrer">Twitter</a>
               </li>
               <li>
-                <a href="#FIXME" title="youtube" target="_blank" class="icon youtube" rel="noopener noreferrer">You
+                <a href="#FIXME" title="youtube" target="_blank" class="icon youtube mt-size"
+                  rel="noopener noreferrer">You
                   Tube</a>
               </li>
               <li>
-                <a href="#FIXME" title="wifi" target="_blank" class="icon wifi" rel="noopener noreferrer">Wi-Fi</a>
+                <a href="#FIXME" title="wifi" target="_blank" class="icon rfi mt-size"
+                  rel="noopener noreferrer">Wi-Fi</a>
               </li>
               <li>
-                <a href="#FIXME" title="facebook" target="_blank" class="icon facebook"
+                <a href="#FIXME" title="facebook" target="_blank" class="icon facebook mt-size"
                   rel="noopener noreferrer">Facebook</a>
               </li>
               <li>
-                <a href="#FIXME" title="google-plus" target="_blank" class="icon google-plus"
+                <a href="#FIXME" title="twitter" target="_blank" class="icon twitter mt-size"
+                  rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="google-plus" target="_blank" class="icon google-plus mt-size"
                   rel="noopener noreferrer">Google Plus</a>
               </li>
             </ul>
