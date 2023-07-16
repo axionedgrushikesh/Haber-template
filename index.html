@@ -51,12 +51,12 @@
               <li class="active">
                 <a href="/index.html" title="Home">Home</a>
               </li>
-              <li class="about-list">
-                <a href="#FIXME" title="About" class="down-arrow">About</a>
-                <ul class="about-dropdown-list">
-                  <li>first</li>
-                  <li>second</li>
-                  <li>third</li>
+              <li class="dropdown about-list">
+                <a href="#FIXME" title="About" class="dropbtn down-arrow">About</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
                 </ul>
               </li>
               <li>
@@ -361,28 +361,30 @@
           <figure>
             <img src="https://dummyimage.com/1518x456/000/fff" alt="city image">
           </figure>
-          <form class="contact-form">
+          <div class="contact-us-form">
             <h2>QUICK CONTACT</h2>
-            <div class="contacts">
-              <div class="details-form-input">
-                <div class="input-grp">
-                  <input type="text" placeholder="Name:" name="name" />
+            <form class="contact-form">
+              <div class="contacts">
+                <div class="details-form-input">
+                  <div class="input-grp">
+                    <input type="text" placeholder="Name:" name="name" />
+                  </div>
+                  <div class="input-grp">
+                    <input type="email" placeholder="E-mail:" name="email" />
+                  </div>
+                  <div class="input-grp">
+                    <input type="number" placeholder="phone:" name="phoneNo" />
+                  </div>
                 </div>
-                <div class="input-grp">
-                  <input type="email" placeholder="E-mail:" name="email" />
-                </div>
-                <div class="input-grp">
-                  <input type="number" placeholder="phone:" name="phoneNo" />
+                <div class="input-textaria">
+                  <textarea id="message" name="message" rows="9" cols="60" placeholder="Message"></textarea>
                 </div>
               </div>
-              <div class="input-textaria">
-                <textarea id="message" name="message" rows="9" cols="60" placeholder="Message"></textarea>
+              <div class="submit-btn">
+                <input type="submit" value="Send" />
               </div>
-            </div>
-            <div class="submit-btn">
-              <input type="submit" value="Send" />
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
       <!-- contact section ends here -->
@@ -431,11 +433,13 @@
                   rel="noopener noreferrer">Twitter</a>
               </li>
               <li>
-                <a href="#FIXME" title="youtube" target="_blank" class="icon youtube mt-size" rel="noopener noreferrer">You
+                <a href="#FIXME" title="youtube" target="_blank" class="icon youtube mt-size"
+                  rel="noopener noreferrer">You
                   Tube</a>
               </li>
               <li>
-                <a href="#FIXME" title="wifi" target="_blank" class="icon rfi mt-size" rel="noopener noreferrer">Wi-Fi</a>
+                <a href="#FIXME" title="wifi" target="_blank" class="icon rfi mt-size"
+                  rel="noopener noreferrer">Wi-Fi</a>
               </li>
               <li>
                 <a href="#FIXME" title="facebook" target="_blank" class="icon facebook mt-size"
