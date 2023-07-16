@@ -230,7 +230,7 @@ sub {
 }
 
 .cf {
-  zoom: 1;
+  *zoom: 1;
 }
 
 /* 1.3. Font class declaration
